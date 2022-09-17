@@ -16,6 +16,9 @@ namespace FormrecognizerProject
         private static readonly string endpoint = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_ENDPOINT"); //"PASTE_YOUR_FORM_RECOGNIZER_ENDPOINT_HERE";
         private static readonly string apiKey = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_SUBSCRIPTION_KEY");//"PASTE_YOUR_FORM_RECOGNIZER_SUBSCRIPTION_KEY_HERE";
         private static readonly AzureKeyCredential credential = new AzureKeyCredential(apiKey);
+        string trainingDataUrl = "";
+        string formUrl = "";
+        string receiptUrl = "https://myinvoiceblobstorage.blob.core.windows.net/invoices-blob-container/20220916_Einkauf.pdf";
 
         static void Main(string[] args)
         {
